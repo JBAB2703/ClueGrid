@@ -60,7 +60,7 @@ if (!DEV_MODE && stats.lastPlayed === todayKey) {
 
 function lockGame(msg) {
   formEl.style.display = "none";
-  messageEl.textContent += `<br>${msg}`;
+  showMessage(msg);
 }
 
 function startGame() {
