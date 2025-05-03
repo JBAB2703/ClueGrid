@@ -1,7 +1,7 @@
 :root {
-    --bg: #f0f1f3;           /* Soft grayish white (not stark) */
+    --bg: #000000;           /* Soft grayish white (not stark) */
     --text: #2b2b2b;         /* Dark charcoal text */
-    --card: #ffffff;         /* Clean elevated cards */
+    --card: #f1c232ec;         /* Clean elevated cards */
     --border: #b0b8c1;       /* Cooler gray border */
     --correct: #16a34a;      /* Strong green (still fun) */
     --close: #eab308;        /* Warm amber for near match */
