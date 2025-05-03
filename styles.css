@@ -1,11 +1,11 @@
 :root {
-    --bg: #f4f4f4;
-    --text: #333;
-    --card: #ffffff;
-    --border: #f1e9e9;
-    --correct: #4CAF50;
-    --close: #FFD700;
-    --wrong: #888;
+    --bg: #f9fafb;           /* Soft near-white background */
+    --text: #333333;         /* Deep charcoal text */
+    --card: #ffffff;         /* Clean white cards */
+    --border: #d1d5db;       /* Subtle gray border */
+    --correct: #34d399;      /* Minty green */
+    --close: #facc15;        /* Golden yellow */
+    --wrong: #d1d5db;        /* Muted light gray */
   }
   
   body.dark {
