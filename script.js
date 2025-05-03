@@ -96,7 +96,7 @@ function startGame() {
       stats.lastPlayed = todayKey;
       localStorage.setItem("cluegridStats", JSON.stringify(stats));
       updateStatsDisplay();
-      showMessage(`❌ Out of guesses. The word was ${todaysWord}. Try again tomorrow.`);
+      showMessage(`❌ Out of guesses. The word was <strong>${todaysWord}</strong>. Try again tomorrow.`);
       lockGame("Try again tomorrow.");
     } else {
       showMessage(`Incorrect. ${5 - guesses.length} guesses left.`);
