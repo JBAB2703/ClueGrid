@@ -85,22 +85,23 @@ function startGame() {
     renderGuess(guess);
 
     if (guess === todaysWord) {
-      stats.wins++;
-      stats.lastPlayed = todayKey;
-      localStorage.setItem("cluegridStats", JSON.stringify(stats));
-      updateStatsDisplay();
-      showMessage("🎉 You got it!");
-      lockGame("Come back tomorrow for a new word.");
-    } else if (guesses.length >= 5) {
-      stats.losses++;
-      stats.lastPlayed = todayKey;
-      localStorage.setItem("cluegridStats", JSON.stringify(stats));
-      updateStatsDisplay();
-      showMessage(`❌ Out of guesses. The word was "${todaysWord}".`);
-      lockGame("Try again tomorrow.");
-    } else {
-      showMessage(`Incorrect. ${5 - guesses.length} guesses left.`);
-    }
+        stats.wins++;
+        stats.lastPlayed = todayKey;
+        localStorage.setItem("cluegridStats", JSON.stringify(stats));
+        updateStatsDisplay();
+        showMessage("✅ You got it!");
+        lockGame("Come back tomorrow for a new word.");
+      } else if (guesses.length >= 5) {
+        stats.losses++;
+        stats.lastPlayed = todayKey;
+        localStorage.setItem("cluegridStats", JSON.stringify(stats));
+        updateStatsDisplay();
+        showMessage(`❌ Out of guesses. The word was "${todaysWord}". Try again tomorrow.`);
+        lockGame("Try again tomorrow.");
+      } else {
+        showMessage(`Incorrect. ${5 - guesses.length} guesses left.`);
+      }
+      
   });
 }
 
