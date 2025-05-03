@@ -130,7 +130,7 @@ function renderGuess(guess) {
 }
 
 function showMessage(msg) {
-  messageEl.textContent = msg;
+  messageEl.innerHTML = msg;
 }
 
 const toggle = document.getElementById("darkModeToggle");
