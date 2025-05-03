@@ -1,5 +1,5 @@
 // Toggle this to true when testing; false for daily lock
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 // Utilities
 function getTodayKey() {
@@ -53,7 +53,7 @@ const todayKey = getTodayKey();
 
 if (!DEV_MODE && stats.lastPlayed === todayKey) {
   updateStatsDisplay();
-  lockGame("You’ve already played today! Come back tomorrow.");
+  lockGame("You've already played today! Come back tomorrow.");
 } else {
   startGame();
 }
@@ -85,23 +85,22 @@ function startGame() {
     renderGuess(guess);
 
     if (guess === todaysWord) {
-        stats.wins++;
-        stats.lastPlayed = todayKey;
-        localStorage.setItem("cluegridStats", JSON.stringify(stats));
-        updateStatsDisplay();
-        showMessage("✅ You got it!");
-        lockGame("Come back tomorrow for a new word.");
-      } else if (guesses.length >= 5) {
-        stats.losses++;
-        stats.lastPlayed = todayKey;
-        localStorage.setItem("cluegridStats", JSON.stringify(stats));
-        updateStatsDisplay();
-        showMessage(`❌ Out of guesses. The word was "${todaysWord}". Try again tomorrow.`);
-        lockGame("Try again tomorrow.");
-      } else {
-        showMessage(`Incorrect. ${5 - guesses.length} guesses left.`);
-      }
-      
+      stats.wins++;
+      stats.lastPlayed = todayKey;
+      localStorage.setItem("cluegridStats", JSON.stringify(stats));
+      updateStatsDisplay();
+      showMessage("✅ You got it!");
+      lockGame("Come back tomorrow for a new word.");
+    } else if (guesses.length >= 5) {
+      stats.losses++;
+      stats.lastPlayed = todayKey;
+      localStorage.setItem("cluegridStats", JSON.stringify(stats));
+      updateStatsDisplay();
+      showMessage(`❌ Out of guesses. The word was ${todaysWord}. Try again tomorrow.`);
+      lockGame("Try again tomorrow.");
+    } else {
+      showMessage(`Incorrect. ${5 - guesses.length} guesses left.`);
+    }
   });
 }
 
