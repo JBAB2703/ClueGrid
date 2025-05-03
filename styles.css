@@ -144,6 +144,8 @@ body {
   
   /* Message + Stats */
   #message {
+    display: block;
+    color: red;
     text-align: center;
     font-weight: bold;
     margin-bottom: 1rem;
