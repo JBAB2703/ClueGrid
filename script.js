@@ -1,5 +1,5 @@
 // Toggle this to true when testing; false for daily lock
-const DEV_MODE = true;
+const DEV_MODE = false;
 
 // Utilities
 function getTodayKey() {
