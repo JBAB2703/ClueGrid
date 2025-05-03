@@ -1,0 +1,156 @@
+:root {
+    --bg: #f4f4f4;
+    --text: #333;
+    --card: #ffffff;
+    --border: #f1e9e9;
+    --correct: #4CAF50;
+    --close: #FFD700;
+    --wrong: #888;
+  }
+  
+  body.dark {
+    --bg: #595e6a;           /* Deep blue-gray background */
+    --text: #e0e0e0;         /* Soft off-white text */
+    --card: #a3a54c;         /* Slightly raised card color */
+    --border: #1b3963;       /* Subtle border */
+    --correct: #4CAF50;      /* Keep for consistency */
+    --close: #e2c663;        /* Slightly muted gold */
+    --wrong: #4b4f5a;        /* Mid-gray-blue */
+  }
+  
+  
+/* General Layout */
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Literata', serif;
+  }
+  
+  main {
+    background: var(--card);
+  }
+  
+  .letter-box {
+    border: 2px solid var(--border);
+    background-color: var(--card);
+    color: var(--text);
+  }
+  
+  .correct {
+    background-color: var(--correct);
+    border-color: var(--correct);
+    color: white;
+  }
+  
+  .close {
+    background-color: var(--close);
+    border-color: var(--close);
+    color: black;
+  }
+  
+  .wrong {
+    background-color: var(--wrong);
+    border-color: var(--wrong);
+    color: white;
+  }
+  
+  /* Header */
+  h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Clue Styling */
+  #clue {
+    font-style: italic;
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    white-space: pre-line; /* Makes line breaks from haiku display correctly */
+  }
+  
+  /* Guess Board */
+  #board {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .guess-row {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  
+  .letter-box {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 6px;
+    border: 2px solid #ccc;
+    background-color: #eee;
+  }
+  
+  .correct {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #4CAF50;
+  }
+  
+  .close {
+    background-color: #FFD700;
+    color: #333;
+    border-color: #FFD700;
+  }
+  
+  .wrong {
+    background-color: #ccc;
+    color: #333;
+  }
+  
+  /* Input + Button */
+  #guess-form {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  #guess-input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    width: 120px;
+    text-transform: uppercase;
+  }
+  
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  /* Message + Stats */
+  #message {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+  }
+  
+  #stats-section {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #665;
+  }

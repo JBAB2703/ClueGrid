@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ClueGrid</title>
+  <link href="https://fonts.googleapis.com/css2?family=Literata&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <main>
+    <h1>ClueGrid</h1>
+
+    <label class="dark-toggle">
+        <input type="checkbox" id="darkModeToggle" />
+        Dark Mode
+    </label>
+      
+    <section id="clue-section">
+      <p id="clue"></p>
+    </section>
+
+    <section id="board-section">
+      <div id="board"></div>
+    </section>
+
+    <form id="guess-form" autocomplete="off">
+      <input id="guess-input" type="text" maxlength="5" placeholder="Enter guess" />
+      <button type="submit">Guess</button>
+    </form>
+
+    <p id="message"></p>
+
+    <section id="stats-section">
+      <div>Wins: <span id="win-count">0</span></div>
+      <div>Losses: <span id="loss-count">0</span></div>
+    </section>
+  </main>
+
+  <!-- JS Files (in order) -->
+  <script src="wordCluePairs.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
+
