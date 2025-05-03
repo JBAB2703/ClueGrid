@@ -1,12 +1,12 @@
 :root {
-    --bg: #f9fafb;           /* Soft near-white background */
-    --text: #333333;         /* Deep charcoal text */
-    --card: #ffffff;         /* Clean white cards */
-    --border: #d1d5db;       /* Subtle gray border */
-    --correct: #34d399;      /* Minty green */
-    --close: #facc15;        /* Golden yellow */
-    --wrong: #d1d5db;        /* Muted light gray */
-  }
+    --bg: #f0f1f3;           /* Soft grayish white (not stark) */
+    --text: #2b2b2b;         /* Dark charcoal text */
+    --card: #ffffff;         /* Clean elevated cards */
+    --border: #b0b8c1;       /* Cooler gray border */
+    --correct: #16a34a;      /* Strong green (still fun) */
+    --close: #eab308;        /* Warm amber for near match */
+    --wrong: #9ca3af;        /* Muted blue-gray for wrong */
+  }  
   
   body.dark {
     --bg: #595e6a;           /* Deep blue-gray background */
